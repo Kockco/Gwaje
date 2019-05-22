@@ -30,3 +30,4 @@ int main()
 
 	cout <<"찾고자 했던"<<j<<" 번째의 값:"<< findM(i,j)<< endl;
 	
+}
