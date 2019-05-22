@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int result[10000];
+int total = 0;
+
+int findM(int n, int m)
+{
+	for (int i = 1; i <= n; i++) {
+		if (n % i == 0)
+		{
+			result[total++] = i;
+		}
+	}
+	/*cout << "들어간수" << endl;
+	for (int i = 0; i < total; i++)
+	{
+		cout << result[i] << ",";
+	}
+	cout << endl;*/
+	return result[m-1];
+}
+int main()
+{
+	int i, j;
+	cout << "구하고자 하는 수를 입력하시오:";
+	cin >> i;
+	cout << "몇번째를 구하시겠습니까?";
+	cin >> j;
+
+	cout <<"찾고자 했던"<<j<<" 번째의 값:"<< findM(i,j)<< endl;
+	
